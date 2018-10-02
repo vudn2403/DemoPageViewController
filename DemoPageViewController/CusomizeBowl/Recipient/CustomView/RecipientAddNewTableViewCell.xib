@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecipientAddNewTableViewCell" selectionStyle="none" indentationWidth="10" rowHeight="165" id="KGk-i7-Jjw" customClass="RecipientAddNewTableViewCell" customModule="DemoPageViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="164.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-jC-1YT">
+                        <rect key="frame" x="16" y="10" width="288" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcd-at-t1M">
+                        <rect key="frame" x="16" y="48" width="288" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLh-gp-TiA">
+                        <rect key="frame" x="16" y="86" width="288" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-8V-QJH">
+                        <rect key="frame" x="16" y="124" width="288" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sRa-8V-QJH" secondAttribute="bottom" constant="10" id="34d-ve-HhL"/>
+                    <constraint firstItem="zcd-at-t1M" firstAttribute="leading" secondItem="7h4-jC-1YT" secondAttribute="leading" id="9zO-gb-K0I"/>
+                    <constraint firstAttribute="trailing" secondItem="7h4-jC-1YT" secondAttribute="trailing" constant="16" id="M48-Qo-13h"/>
+                    <constraint firstItem="sRa-8V-QJH" firstAttribute="leading" secondItem="7h4-jC-1YT" secondAttribute="leading" id="PTz-8G-1HO"/>
+                    <constraint firstItem="LLh-gp-TiA" firstAttribute="top" secondItem="zcd-at-t1M" secondAttribute="bottom" constant="8" id="Q2d-a1-GYe"/>
+                    <constraint firstItem="zcd-at-t1M" firstAttribute="top" secondItem="7h4-jC-1YT" secondAttribute="bottom" constant="8" id="V3O-yI-Cj9"/>
+                    <constraint firstItem="7h4-jC-1YT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YQF-5j-UBP"/>
+                    <constraint firstItem="LLh-gp-TiA" firstAttribute="leading" secondItem="7h4-jC-1YT" secondAttribute="leading" id="a4P-h5-3Hc"/>
+                    <constraint firstItem="7h4-jC-1YT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aUe-ji-702"/>
+                    <constraint firstItem="sRa-8V-QJH" firstAttribute="trailing" secondItem="7h4-jC-1YT" secondAttribute="trailing" id="cTh-fi-fsk"/>
+                    <constraint firstItem="zcd-at-t1M" firstAttribute="trailing" secondItem="7h4-jC-1YT" secondAttribute="trailing" id="jlI-qf-UDP"/>
+                    <constraint firstItem="sRa-8V-QJH" firstAttribute="top" secondItem="LLh-gp-TiA" secondAttribute="bottom" constant="8" id="mdi-br-hhb"/>
+                    <constraint firstItem="LLh-gp-TiA" firstAttribute="trailing" secondItem="7h4-jC-1YT" secondAttribute="trailing" id="txV-qN-C9f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="25" y="112.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomizeBowlViewController" customModule="DemoPageViewController" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="b92-Un-WDf" id="3WI-4B-SeO"/>
+                <outlet property="pageView" destination="ysL-Cy-ZIA" id="mgB-9p-2ii"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="CustomizeBowlViewController" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysL-Cy-ZIA">
+                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="b92-Un-WDf">
+                    <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="r3A-bJ-P72"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b92-Un-WDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Z9-jR-Gb8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b92-Un-WDf" secondAttribute="trailing" id="LWM-mi-z5Z"/>
+                <constraint firstItem="ysL-Cy-ZIA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nh6-1Y-Lsa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ysL-Cy-ZIA" secondAttribute="bottom" id="Ri4-GE-bgA"/>
+                <constraint firstItem="b92-Un-WDf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rqp-ur-olQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ysL-Cy-ZIA" secondAttribute="trailing" id="Y1d-ez-oUh"/>
+                <constraint firstItem="ysL-Cy-ZIA" firstAttribute="top" secondItem="b92-Un-WDf" secondAttribute="bottom" id="y25-dY-CdW"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
