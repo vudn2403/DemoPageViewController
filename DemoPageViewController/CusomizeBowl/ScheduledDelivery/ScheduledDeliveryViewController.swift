@@ -12,6 +12,7 @@ class ScheduledDeliveryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var times = [String]()
+    var previosSelectedCellIndex: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,13 @@ extension ScheduledDeliveryViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "time", for: indexPath) as? ScheduledDeliveryTimeTableViewCell else {
                 return UITableViewCell()
             }
+            if indexPath.row == 0 {
+                cell.selectedRadioButton.isSelected = true
+                previosSelectedCellIndex = indexPath
+            }
             cell.timeLabel.text = times[indexPath.row]
+            cell.delegate = self
+            cell.indexPath = indexPath
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "day", for: indexPath) as? ScheduledDeliveryDayTableViewCell else {
@@ -81,10 +88,38 @@ extension ScheduledDeliveryViewController: UITableViewDataSource {
 
 extension ScheduledDeliveryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let cell = tableView.cellForRow(at: indexPath) as? ScheduledDeliveryTimeTableViewCell {
+            if let index = previosSelectedCellIndex {
+                if index == indexPath {
+                    return
+                } else {
+                    if let cell = tableView.cellForRow(at: index) as? ScheduledDeliveryTimeTableViewCell {
+                        cell.selectedRadioButton.isSelected = false
+                    }
+                }
+            }
+            previosSelectedCellIndex = indexPath
+            cell.selectedRadioButton.isSelected = true
+        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension ScheduledDeliveryViewController: ScheduledDeliveryTimeTableViewCellDelegate {
+    func onSelectedButton(_ tableViewCell: ScheduledDeliveryTimeTableViewCell, buttonInCellAt indexPath: IndexPath) {
+        if let index = previosSelectedCellIndex {
+            if index == indexPath {
+                return
+            } else {
+                if let cell = tableView.cellForRow(at: index) as? ScheduledDeliveryTimeTableViewCell {
+                    cell.selectedRadioButton.isSelected = false
+                }
+            }
+        }
+        
+        previosSelectedCellIndex = indexPath
     }
 }

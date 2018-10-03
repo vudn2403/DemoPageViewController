@@ -25,46 +25,52 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-DU-9Ax">
-                        <rect key="frame" x="16" y="14" width="16" height="16"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbY-Ik-65h" customClass="DLRadioButton">
+                        <rect key="frame" x="0.0" y="6" width="48" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="16" id="Ciw-JR-OYD"/>
-                            <constraint firstAttribute="height" constant="16" id="nRW-2K-acX"/>
+                            <constraint firstAttribute="height" constant="32" id="b0Z-Ct-gWX"/>
+                            <constraint firstAttribute="width" constant="48" id="o2G-Ry-lm7"/>
                         </constraints>
+                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        <state key="normal" title="Button"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
                                 <real key="value" value="16"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
                                 <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
-                                <real key="value" value="10"/>
+                                <real key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
-                                <real key="value" value="16"/>
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
                         </userDefinedRuntimeAttributes>
-                    </view>
+                        <connections>
+                            <action selector="onSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="as5-aJ-su9"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="v0d-DU-9Ax" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="61F-dN-Oz5"/>
-                    <constraint firstItem="uU6-gq-21f" firstAttribute="centerY" secondItem="v0d-DU-9Ax" secondAttribute="centerY" id="SkU-ve-4NX"/>
-                    <constraint firstItem="uU6-gq-21f" firstAttribute="leading" secondItem="v0d-DU-9Ax" secondAttribute="trailing" constant="16" id="Wca-Qi-02w"/>
-                    <constraint firstItem="v0d-DU-9Ax" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Xqa-os-2WV"/>
+                    <constraint firstItem="vbY-Ik-65h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ccd-NN-asp"/>
+                    <constraint firstItem="uU6-gq-21f" firstAttribute="leading" secondItem="vbY-Ik-65h" secondAttribute="trailing" id="Chy-Jm-gtz"/>
+                    <constraint firstItem="uU6-gq-21f" firstAttribute="centerY" secondItem="vbY-Ik-65h" secondAttribute="centerY" id="XDA-mh-SBh"/>
+                    <constraint firstItem="vbY-Ik-65h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dIV-CL-e89"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="nameLabel" destination="uU6-gq-21f" id="Iyp-7W-WJo"/>
-                <outlet property="selectedView" destination="v0d-DU-9Ax" id="twm-rV-4lS"/>
+                <outlet property="selectedRadioButton" destination="vbY-Ik-65h" id="7mq-Np-vZh"/>
             </connections>
         </tableViewCell>
     </objects>

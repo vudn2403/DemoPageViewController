@@ -19,31 +19,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OL-Xi-FM7">
-                        <rect key="frame" x="16" y="14" width="16" height="16"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="16" id="Gbj-tn-wib"/>
-                            <constraint firstAttribute="height" constant="16" id="nSq-lt-rhJ"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfB-7G-VYK">
                         <rect key="frame" x="48" y="11" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHv-TX-JWG" customClass="DLRadioButton">
+                        <rect key="frame" x="0.0" y="5" width="48" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="mFa-gf-7o9"/>
+                            <constraint firstAttribute="width" constant="48" id="puy-fW-0Gl"/>
+                        </constraints>
+                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="Button"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="onSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SCR-DH-sfo"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4OL-Xi-FM7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Nq-HO-fjI"/>
-                    <constraint firstItem="cfB-7G-VYK" firstAttribute="centerY" secondItem="4OL-Xi-FM7" secondAttribute="centerY" id="BsD-xW-9ZW"/>
-                    <constraint firstItem="cfB-7G-VYK" firstAttribute="leading" secondItem="4OL-Xi-FM7" secondAttribute="trailing" constant="16" id="gMw-2s-L3a"/>
-                    <constraint firstItem="4OL-Xi-FM7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gSO-oy-iNQ"/>
+                    <constraint firstItem="cfB-7G-VYK" firstAttribute="leading" secondItem="pHv-TX-JWG" secondAttribute="trailing" id="3AM-qa-QCZ"/>
+                    <constraint firstItem="pHv-TX-JWG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5gd-9N-NQK"/>
+                    <constraint firstItem="pHv-TX-JWG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6s5-6v-UvN"/>
+                    <constraint firstItem="cfB-7G-VYK" firstAttribute="centerY" secondItem="pHv-TX-JWG" secondAttribute="centerY" id="d7c-Oh-98B"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="selectedView" destination="4OL-Xi-FM7" id="tBj-X4-GPP"/>
+                <outlet property="selectedRadioButton" destination="pHv-TX-JWG" id="Tdg-9k-Nlq"/>
                 <outlet property="timeLabel" destination="cfB-7G-VYK" id="v4k-KZ-R8M"/>
             </connections>
         </tableViewCell>

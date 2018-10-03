@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import DLRadioButton
 
+protocol ScheduledDeliveryTimeTableViewCellDelegate: NSObjectProtocol {
+    func onSelectedButton(_ tableViewCell: ScheduledDeliveryTimeTableViewCell, buttonInCellAt indexPath: IndexPath)
+}
 class ScheduledDeliveryTimeTableViewCell: UITableViewCell {
-    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var selectedRadioButton: DLRadioButton!
     @IBOutlet weak var timeLabel: UILabel!
+    weak var delegate: ScheduledDeliveryTimeTableViewCellDelegate?
+    var indexPath: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectedView.layer.cornerRadius = selectedView.frame.width/2
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        selectedView.isHidden = selected ? false : true
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     
-    func bindingData() {
-        selectedView.backgroundColor = isSelected ? UIColor.red : UIColor.red.withAlphaComponent(CGFloat(0.2))
+    @IBAction func onSelected(_ sender: DLRadioButton) {
+        if let indexPath = indexPath {
+            delegate?.onSelectedButton(self, buttonInCellAt: indexPath)
+        }
     }
+    
 }

@@ -14,14 +14,12 @@ class RecipientViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var users = [String]()
+    var previosSelectedCellIndex : IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: "RecipientAddNewTableViewCell", bundle: nil), forCellReuseIdentifier: "addNew")
-        tableView.register(UINib(nibName: "RecipientSavedInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "savedInfo")
-        users = ["Nguyen Van A", "Nguyen Van B", "Nguyen Van C"]
         // Do any additional setup after loading the view.
+        setUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +29,19 @@ class RecipientViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setUp() {
+        tableView.register(UINib(nibName: "RecipientAddNewTableViewCell", bundle: nil), forCellReuseIdentifier: "addNew")
+        tableView.register(UINib(nibName: "RecipientSavedInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "savedInfo")
+        users = ["Nguyen Van A", "Nguyen Van B", "Nguyen Van C"]
+        let tapViewGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapView(_:)))
+        tapViewGestureRecognizer.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapViewGestureRecognizer)
+    }
+    
+    @objc func onTapView(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 
@@ -52,6 +63,12 @@ extension RecipientViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "savedInfo", for: indexPath) as? RecipientSavedInfoTableViewCell else {
                 return UITableViewCell()
             }
+            if indexPath.row == 0 {
+                cell.selectedRadioButton.isSelected = true
+                previosSelectedCellIndex = indexPath
+            }
+            cell.delegate = self
+            cell.indexPath = indexPath
             cell.nameLabel.text = users[indexPath.row]
             return cell
         } else {
@@ -88,5 +105,38 @@ extension RecipientViewController: UITableViewDataSource {
 
 extension RecipientViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? RecipientSavedInfoTableViewCell {
+            if let index = previosSelectedCellIndex {
+                if index == indexPath {
+                    return
+                } else {
+                    if let cell = tableView.cellForRow(at: index) as? RecipientSavedInfoTableViewCell {
+                        cell.selectedRadioButton.isSelected = false
+                    }
+                }
+            }
+            previosSelectedCellIndex = indexPath
+            cell.selectedRadioButton.isSelected = true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension RecipientViewController: RecipientSavedInfoTableViewCellDelegate {
+    func onSelectedButton(_ tableViewCell: RecipientSavedInfoTableViewCell, buttonInCellAt indexPath: IndexPath) {
+        if let index = previosSelectedCellIndex {
+            if index == indexPath {
+                return
+            } else {
+                if let cell = tableView.cellForRow(at: index) as? RecipientSavedInfoTableViewCell {
+                    cell.selectedRadioButton.isSelected = false
+                }
+            }
+        }
+        
+        previosSelectedCellIndex = indexPath
     }
 }

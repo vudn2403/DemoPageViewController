@@ -9,19 +9,30 @@
 import UIKit
 import DLRadioButton
 
+protocol RecipientSavedInfoTableViewCellDelegate: NSObjectProtocol {
+    func onSelectedButton(_ tableViewCell: RecipientSavedInfoTableViewCell, buttonInCellAt indexPath: IndexPath)
+}
+
 class RecipientSavedInfoTableViewCell: UITableViewCell {
-    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var selectedRadioButton: DLRadioButton!
     @IBOutlet weak var nameLabel: UILabel!
     
+    weak var delegate: RecipientSavedInfoTableViewCellDelegate?
+    var indexPath: IndexPath?
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectedView.layer.cornerRadius = selectedView.frame.width/2
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        selectedView.isHidden = selected ? false : true
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    @IBAction func onSelected(_ sender: Any) {
+        if let indexPath = indexPath {
+            delegate?.onSelectedButton(self, buttonInCellAt: indexPath)
+        }
+    }
+    
 }
