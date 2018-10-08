@@ -43,6 +43,14 @@ class RecipientViewController: UIViewController {
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    func isVerify() -> Bool {
+        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? RecipientAddNewTableViewCell else {
+            return false
+        }
+        
+        return cell.isVerifyField()
+    }
 }
 
 extension RecipientViewController: UITableViewDataSource {
@@ -75,6 +83,7 @@ extension RecipientViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "addNew", for: indexPath) as? RecipientAddNewTableViewCell else {
                 return UITableViewCell()
             }
+            cell.viewController = self
             return cell
         }
     }

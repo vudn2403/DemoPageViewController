@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-La-pcq">
-                    <rect key="frame" x="0.0" y="49" width="375" height="576"/>
+                    <rect key="frame" x="0.0" y="49" width="375" height="618"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="3Mi-V6-wHk"/>
@@ -35,29 +35,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-b5-Gp0">
-                    <rect key="frame" x="0.0" y="625" width="375" height="42"/>
-                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="42" id="b07-qL-fWO"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                    <state key="normal" title="Submit and review">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j2g-La-pcq" secondAttribute="trailing" id="15E-mG-CHK"/>
                 <constraint firstItem="j2g-La-pcq" firstAttribute="top" secondItem="NVn-Tk-mHD" secondAttribute="bottom" constant="8" id="K2t-nd-Y10"/>
                 <constraint firstItem="NVn-Tk-mHD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="R0F-3O-qZH"/>
-                <constraint firstItem="HVo-b5-Gp0" firstAttribute="top" secondItem="j2g-La-pcq" secondAttribute="bottom" id="fct-Rn-vfc"/>
-                <constraint firstItem="HVo-b5-Gp0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jOQ-fW-tzz"/>
                 <constraint firstItem="NVn-Tk-mHD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qtm-39-LAO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HVo-b5-Gp0" secondAttribute="trailing" id="tht-uK-wZH"/>
                 <constraint firstItem="j2g-La-pcq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wV8-sl-CeI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HVo-b5-Gp0" secondAttribute="bottom" id="yl3-2s-gZg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j2g-La-pcq" secondAttribute="bottom" id="yzM-Pd-ep7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="25.5" y="51.5"/>

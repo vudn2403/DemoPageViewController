@@ -27,6 +27,14 @@
 		1D32FD2421636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FD2221636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift */; };
 		1D32FD2521636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FD2321636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib */; };
 		1D7AF92A21637B5E0016DB17 /* RecipientRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AF92921637B5E0016DB17 /* RecipientRowModel.swift */; };
+		1DEB537D216AF6DD00B13659 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */; };
+		1DEB5380216AFEC900B13659 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB537F216AFEC900B13659 /* BaseViewController.swift */; };
+		1DEB5386216B45EE00B13659 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5385216B45EE00B13659 /* SearchTextField.swift */; };
+		1DEB538D216B46AA00B13659 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5389216B46AA00B13659 /* AppColor.swift */; };
+		1DEB538E216B46AA00B13659 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538A216B46AA00B13659 /* AppFont.swift */; };
+		1DEB538F216B46AA00B13659 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538B216B46AA00B13659 /* Constants.swift */; };
+		1DEB5390216B46AA00B13659 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538C216B46AA00B13659 /* Enum.swift */; };
+		1DEB5392216B474D00B13659 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5391216B474D00B13659 /* UIColorExtension.swift */; };
 		DBCCA585AC201EE3F364C5EC /* Pods_DemoPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FEA2284BCE65B66F2625E /* Pods_DemoPageViewController.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +61,14 @@
 		1D32FD2221636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientSavedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		1D32FD2321636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipientSavedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		1D7AF92921637B5E0016DB17 /* RecipientRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientRowModel.swift; sourceTree = "<group>"; };
+		1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1DEB537F216AFEC900B13659 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1DEB5385216B45EE00B13659 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		1DEB5389216B46AA00B13659 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		1DEB538A216B46AA00B13659 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		1DEB538B216B46AA00B13659 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1DEB538C216B46AA00B13659 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		1DEB5391216B474D00B13659 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7A2615A1233E68D27DE4DEF2 /* Pods-DemoPageViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPageViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPageViewController/Pods-DemoPageViewController.release.xcconfig"; sourceTree = "<group>"; };
 		922FEA2284BCE65B66F2625E /* Pods_DemoPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADC8C11861A60F7107AA988 /* Pods-DemoPageViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPageViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPageViewController/Pods-DemoPageViewController.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +107,9 @@
 		1D32FCE621630B9D002CF76A /* DemoPageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1D32FD0721634D22002CF76A /* CusomizeBowl */,
+				1DEB5381216B3FAE00B13659 /* Screens */,
+				1DEB537E216AFEB400B13659 /* BaseController */,
+				1DEB537A216AF6B700B13659 /* Helps */,
 				1D32FCE721630B9D002CF76A /* AppDelegate.swift */,
 				1D32FCE921630B9D002CF76A /* ViewController.swift */,
 				1D32FCEB21630B9D002CF76A /* Main.storyboard */,
@@ -170,6 +188,76 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DEB537A216AF6B700B13659 /* Helps */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5388216B46AA00B13659 /* Constants */,
+				1DEB5382216B457A00B13659 /* Libraries */,
+				1DEB537B216AF6C200B13659 /* Extension */,
+			);
+			path = Helps;
+			sourceTree = "<group>";
+		};
+		1DEB537B216AF6C200B13659 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5391216B474D00B13659 /* UIColorExtension.swift */,
+				1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1DEB537E216AFEB400B13659 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB537F216AFEC900B13659 /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		1DEB5381216B3FAE00B13659 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1D32FD0721634D22002CF76A /* CusomizeBowl */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1DEB5382216B457A00B13659 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5383216B45B100B13659 /* SearchTextField */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		1DEB5383216B45B100B13659 /* SearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5384216B45EE00B13659 /* Classes */,
+			);
+			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		1DEB5384216B45EE00B13659 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5385216B45EE00B13659 /* SearchTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1DEB5388216B46AA00B13659 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB5389216B46AA00B13659 /* AppColor.swift */,
+				1DEB538A216B46AA00B13659 /* AppFont.swift */,
+				1DEB538B216B46AA00B13659 /* Constants.swift */,
+				1DEB538C216B46AA00B13659 /* Enum.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		6F27F43E4AE6871383DE81DE /* Frameworks */ = {
@@ -313,13 +401,21 @@
 				1D32FCEA21630B9D002CF76A /* ViewController.swift in Sources */,
 				1D32FD0121631212002CF76A /* CustomizeBowlViewController.swift in Sources */,
 				1D32FD2021635717002CF76A /* ScheduledDeliveryDayTableViewCell.swift in Sources */,
+				1DEB538D216B46AA00B13659 /* AppColor.swift in Sources */,
 				1D32FD1C216356DC002CF76A /* ScheduledDeliveryTimeTableViewCell.swift in Sources */,
+				1DEB5392216B474D00B13659 /* UIColorExtension.swift in Sources */,
 				1D32FD0521631526002CF76A /* RecipientViewController.swift in Sources */,
+				1DEB5380216AFEC900B13659 /* BaseViewController.swift in Sources */,
+				1DEB538F216B46AA00B13659 /* Constants.swift in Sources */,
 				1D32FD0C21634DE5002CF76A /* ScheduledDeliveryViewController.swift in Sources */,
 				1D7AF92A21637B5E0016DB17 /* RecipientRowModel.swift in Sources */,
 				1D32FD1221635061002CF76A /* RecipientAddNewTableViewCell.swift in Sources */,
 				1D32FCE821630B9D002CF76A /* AppDelegate.swift in Sources */,
+				1DEB538E216B46AA00B13659 /* AppFont.swift in Sources */,
+				1DEB5390216B46AA00B13659 /* Enum.swift in Sources */,
+				1DEB537D216AF6DD00B13659 /* UIViewControllerExtension.swift in Sources */,
 				1D32FD2421636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift in Sources */,
+				1DEB5386216B45EE00B13659 /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
