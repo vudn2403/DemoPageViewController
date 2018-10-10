@@ -24,7 +24,7 @@
                         <date key="date" timeIntervalSinceReferenceDate="560158513.72262597">
                             <!--2018-10-02 07:35:13 +0000-->
                         </date>
-                        <locale key="locale" localeIdentifier="en_CA"/>
+                        <locale key="locale" localeIdentifier="vi"/>
                     </datePicker>
                 </subviews>
                 <constraints>

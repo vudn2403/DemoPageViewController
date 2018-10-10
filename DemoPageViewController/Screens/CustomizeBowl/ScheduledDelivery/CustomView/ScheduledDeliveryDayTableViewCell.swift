@@ -21,6 +21,16 @@ class ScheduledDeliveryDayTableViewCell: UITableViewCell {
         let date = Date()
         datePicker.minimumDate = date
         datePicker.setDate(date, animated: true)
+        datePicker.addTarget(self, action: #selector(onDatePickerValueChange(_:)), for: UIControlEvents.valueChanged)
+    }
+    
+    @objc func onDatePickerValueChange(_ datePicker: UIDatePicker) {
+        if datePicker.date.timeIntervalSince1970 < (datePicker.minimumDate?.timeIntervalSince1970)! {
+            datePicker.setDate(Date(), animated: true)
+        }
+        let dateFM = DateFormatter()
+        dateFM.dateFormat = "dd-MM-yyyy HH:mm:ss a"
+        print(dateFM.string(from: datePicker.date))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,3 +38,5 @@ class ScheduledDeliveryDayTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+
+

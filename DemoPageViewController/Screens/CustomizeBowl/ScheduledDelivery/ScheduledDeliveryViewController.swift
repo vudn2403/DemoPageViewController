@@ -13,12 +13,14 @@ class ScheduledDeliveryViewController: UIViewController {
     
     var times = [String]()
     var previosSelectedCellIndex: IndexPath?
+    var scheduleDilivery: ScheduleDeliveryModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "ScheduledDeliveryTimeTableViewCell", bundle: nil), forCellReuseIdentifier: "time")
         tableView.register(UINib(nibName: "ScheduledDeliveryDayTableViewCell", bundle: nil), forCellReuseIdentifier: "day")
         times = ["6AM - 12AM", "12AM - 6PM"]
+        scheduleDilivery = ScheduleDeliveryModel(Date(), "", "")
         // Do any additional setup after loading the view.
     }
 
@@ -49,6 +51,7 @@ extension ScheduledDeliveryViewController: UITableViewDataSource {
             if indexPath.row == 0 {
                 cell.selectedRadioButton.isSelected = true
                 previosSelectedCellIndex = indexPath
+                scheduleDilivery?.time = times[indexPath.row]
             }
             cell.timeLabel.text = times[indexPath.row]
             cell.delegate = self
@@ -100,6 +103,7 @@ extension ScheduledDeliveryViewController: UITableViewDelegate {
             }
             previosSelectedCellIndex = indexPath
             cell.selectedRadioButton.isSelected = true
+            scheduleDilivery?.time = times[indexPath.row]
         }
     }
     
@@ -119,7 +123,7 @@ extension ScheduledDeliveryViewController: ScheduledDeliveryTimeTableViewCellDel
                 }
             }
         }
-        
+        scheduleDilivery?.time = times[indexPath.row]
         previosSelectedCellIndex = indexPath
     }
 }

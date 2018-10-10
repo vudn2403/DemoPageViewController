@@ -12,10 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomizeBowlViewController" customModule="DemoPageViewController" customModuleProvider="target">
             <connections>
-                <outlet property="nextPageButton" destination="tKL-5J-5Kp" id="UyZ-nJ-vJk"/>
                 <outlet property="pageControl" destination="b92-Un-WDf" id="3WI-4B-SeO"/>
                 <outlet property="pageView" destination="ysL-Cy-ZIA" id="mgB-9p-2ii"/>
-                <outlet property="submitPageButton" destination="9XP-kf-Fi6" id="Tn3-qC-W4Y"/>
+                <outlet property="submitButton" destination="tKL-5J-5Kp" id="ABT-th-TZj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,25 +37,11 @@
                         <constraint firstAttribute="height" constant="42" id="hpX-zg-XKd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                    <state key="normal" title="Next">
+                    <state key="normal" title="Submit">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="onNextPage:" destination="-1" eventType="touchUpInside" id="jan-Aw-m5S"/>
-                    </connections>
-                </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XP-kf-Fi6">
-                    <rect key="frame" x="0.0" y="625" width="375" height="42"/>
-                    <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="42" id="CNS-l0-jBm"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                    <state key="normal" title="Submit and review">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="onSubmit:" destination="-1" eventType="touchUpInside" id="Vs1-QL-Cty"/>
+                        <action selector="onSubmit:" destination="-1" eventType="touchUpInside" id="9nw-49-6q0"/>
                     </connections>
                 </button>
             </subviews>
@@ -66,13 +51,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tKL-5J-5Kp" secondAttribute="trailing" id="Ocb-Si-y7V"/>
                 <constraint firstItem="b92-Un-WDf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rqp-ur-olQ"/>
                 <constraint firstItem="tKL-5J-5Kp" firstAttribute="top" secondItem="ysL-Cy-ZIA" secondAttribute="bottom" id="SIh-bq-0Ly"/>
-                <constraint firstItem="9XP-kf-Fi6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tj5-9B-yE6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ysL-Cy-ZIA" secondAttribute="trailing" id="Y1d-ez-oUh"/>
                 <constraint firstItem="tKL-5J-5Kp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZJ7-NK-20K"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9XP-kf-Fi6" secondAttribute="trailing" id="eCd-At-8uz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b92-Un-WDf" secondAttribute="trailing" id="gU8-ZN-WCJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9XP-kf-Fi6" secondAttribute="bottom" id="jQQ-Vz-LD4"/>
-                <constraint firstItem="9XP-kf-Fi6" firstAttribute="top" secondItem="ysL-Cy-ZIA" secondAttribute="bottom" id="jUg-G7-p0x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tKL-5J-5Kp" secondAttribute="bottom" id="kKX-3o-n5H"/>
                 <constraint firstItem="b92-Un-WDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="x7C-Hy-M7c"/>
                 <constraint firstItem="ysL-Cy-ZIA" firstAttribute="top" secondItem="b92-Un-WDf" secondAttribute="bottom" id="y25-dY-CdW"/>

@@ -24,19 +24,22 @@ class RecipientAddNewTableViewCell: UITableViewCell {
         fullNameTextField.layer.borderWidth = 1.0
         fullNameTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         fullNameTextField.delegate = self
+        addressTextField.layer.cornerRadius = 4
         addressTextField.layer.borderWidth = 1.0
         addressTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         addressTextField.delegate = self
+        zipcodeTextField.layer.cornerRadius = 4
         zipcodeTextField.layer.borderWidth = 1.0
         zipcodeTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         zipcodeTextField.delegate = self
+        cityTextField.layer.cornerRadius = 4
         cityTextField.layer.borderWidth = 1.0
         cityTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         cityTextField.delegate = self
         cityTextField.startVisibleWithoutInteraction = false
         cityTextField.theme = .darkTheme()
         cityTextField.filterStrings(["Ha Noi", "Hai Phong", "Quang Ninh", "Thai Binh",
-                                     "Ha Noi", "Hai Phong", "Quang Ninh", "Thai Binh"])
+                                     "Ha Nam", "Da Nang", "TP Ho Chi Minh", "Can Tho"])
         cityTextField.itemSelectionHandler = { (filteredResults: [SearchTextFieldItem], _ index: Int) in
             self.cityTextField.text = filteredResults[index].title
             self.selectedCity = filteredResults[index].title
@@ -73,7 +76,8 @@ class RecipientAddNewTableViewCell: UITableViewCell {
             vc.alertWith("Lỗi", "Vui lòng nhập thành phố")
             return false
         }
-        
+        let recipient = RecipientModel(fullNameTextField.text!, addressTextField.text!, selectedCity, zipcodeTextField.text!)
+        BowlViewModel.shareInstance.recipient = recipient
         return true
     }
 }

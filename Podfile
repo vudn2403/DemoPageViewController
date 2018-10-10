@@ -7,5 +7,6 @@ target 'DemoPageViewController' do
 
   # Pods for DemoPageViewController
 	pod 'DLRadioButton', '~>1.4'
-	pod 'MaterialComponents/PageControl'
+	pod 'Stripe'
+	pod 'Alamofire'
 end
