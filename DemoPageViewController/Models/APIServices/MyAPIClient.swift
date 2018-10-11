@@ -61,6 +61,7 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
             .responseJSON { responseJSON in
                 switch responseJSON.result {
                 case .success(let json):
+                    print(json)
                     completion(json as? [String: AnyObject], nil)
                 case .failure(let error):
                     completion(nil, error)
