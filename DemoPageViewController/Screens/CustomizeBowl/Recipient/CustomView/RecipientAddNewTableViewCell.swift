@@ -20,21 +20,9 @@ class RecipientAddNewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        fullNameTextField.layer.cornerRadius = 4
-        fullNameTextField.layer.borderWidth = 1.0
-        fullNameTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         fullNameTextField.delegate = self
-        addressTextField.layer.cornerRadius = 4
-        addressTextField.layer.borderWidth = 1.0
-        addressTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         addressTextField.delegate = self
-        zipcodeTextField.layer.cornerRadius = 4
-        zipcodeTextField.layer.borderWidth = 1.0
-        zipcodeTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         zipcodeTextField.delegate = self
-        cityTextField.layer.cornerRadius = 4
-        cityTextField.layer.borderWidth = 1.0
-        cityTextField.layer.borderColor = AppColor.colorBorderBlack().cgColor
         cityTextField.delegate = self
         cityTextField.startVisibleWithoutInteraction = false
         cityTextField.theme = .darkTheme()
@@ -49,6 +37,14 @@ class RecipientAddNewTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        fullNameTextField.setIsOnFocus(false)
+        addressTextField.setIsOnFocus(false)
+        zipcodeTextField.setIsOnFocus(false)
+        cityTextField.setIsOnFocus(false)
     }
     
     func isVerifyField() -> Bool {
@@ -84,11 +80,11 @@ class RecipientAddNewTableViewCell: UITableViewCell {
 
 extension RecipientAddNewTableViewCell: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = AppColor.colorBorderRustyOrange().cgColor
+        textField.setIsOnFocus(true)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderColor = AppColor.colorBorderBlack().cgColor
+        textField.setIsOnFocus(false)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

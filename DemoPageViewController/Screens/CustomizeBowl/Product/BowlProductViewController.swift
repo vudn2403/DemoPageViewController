@@ -8,11 +8,26 @@
 
 import UIKit
 
+enum ProductType: String {
+    case protein = "Protein"
+    case veggies = "Veggies"
+    case sauceForSalad = "SauceForSalad"
+}
+
 class BowlProductViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var cellList = [String]()
-    var orders = OrdersModel.sharedInstance
+    var orders = OrdersModel()
+    var productType: ProductType?
     
+    init(_ productType: ProductType) {
+        self.productType = productType
+        super.init(nibName: "BowlProductViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +35,11 @@ class BowlProductViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUp()
         createData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,22 +57,7 @@ class BowlProductViewController: UIViewController {
     }
     
     func createData() {
-        let food1 = FoodModel(id: "1", name: "Chicken", weight: 60, cost: 500, type: "Protein")
-        let food2 = FoodModel(id: "2", name: "Ground Beef", weight: 60, cost: 500, type: "Protein")
-        let food3 = FoodModel(id: "3", name: "Tofu", weight: 60, cost: 500, type: "Protein")
-        let food4 = FoodModel(id: "4", name: "Basa", weight: 60, cost: 500, type: "Protein")
-        let food5 = FoodModel(id: "5", name: "Egg", weight: 60, cost: 500, type: "Protein")
-        let od1 = OrdersDetailModel(foodModel: food1, amount: 1)
-        let od2 = OrdersDetailModel(foodModel: food2, amount: 2)
-        let od3 = OrdersDetailModel(foodModel: food3, amount: 3)
-        let od4 = OrdersDetailModel(foodModel: food4, amount: 4)
-        let od5 = OrdersDetailModel(foodModel: food5, amount: 5)
-        orders.ordersDetails.append(od1)
-        orders.ordersDetails.append(od2)
-        orders.ordersDetails.append(od3)
-        orders.ordersDetails.append(od4)
-        orders.ordersDetails.append(od5)
-        tableView.reloadData()
+        
     }
 }
 
@@ -73,6 +78,8 @@ extension BowlProductViewController: UITableViewDataSource {
                 for: indexPath) as? BowlProductTitleTableViewCell else {
                     return UITableViewCell()
             }
+            cell.productTypeLabel.text = self.productType?.rawValue
+            cell.suggestWeightLabel.text = "120g"
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(

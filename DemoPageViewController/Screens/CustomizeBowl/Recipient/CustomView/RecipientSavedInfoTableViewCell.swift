@@ -16,6 +16,8 @@ protocol RecipientSavedInfoTableViewCellDelegate: NSObjectProtocol {
 class RecipientSavedInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var selectedRadioButton: DLRadioButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var showInfoButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     weak var delegate: RecipientSavedInfoTableViewCellDelegate?
     var indexPath: IndexPath?
@@ -32,6 +34,37 @@ class RecipientSavedInfoTableViewCell: UITableViewCell {
     @IBAction func onSelected(_ sender: Any) {
         if let indexPath = indexPath {
             delegate?.onSelectedButton(self, buttonInCellAt: indexPath)
+        }
+    }
+    @IBAction func onViewInfo(_ sender: UIButton) {
+        sender.isHidden = true
+        doneButton.isHidden = false
+    }
+    
+    @IBAction func onDone(_ sender: UIButton) {
+        sender.isHidden = true
+        showInfoButton.isHidden = false
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let screen = UIScreen.main.bounds
+        let width = CGFloat(1)
+        let border = CALayer()
+        border.frame = CGRect(x: 15, y: rect.height - width, width: screen.width - 30, height: width)
+        border.borderWidth = width
+        border.borderColor = AppColor.colorPaleGray().cgColor
+        
+        guard let arr = layer.sublayers else {
+            return
+        }
+        
+        // hack but worked
+        if arr.count <= 2 {
+            layer.addSublayer(border)
+            clipsToBounds = true
+        } else {
+            layer.replaceSublayer(arr.last!, with: border)
         }
     }
     

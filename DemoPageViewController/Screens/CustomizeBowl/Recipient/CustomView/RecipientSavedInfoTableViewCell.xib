@@ -59,18 +59,41 @@
                             <action selector="onSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="as5-aJ-su9"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-1D-xCs">
+                        <rect key="frame" x="266" y="6" width="38" height="32"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="View"/>
+                        <connections>
+                            <action selector="onViewInfo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NTE-D6-Q5S"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exH-KU-QXH">
+                        <rect key="frame" x="263" y="5" width="41" height="32"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <state key="normal" title="Done"/>
+                        <connections>
+                            <action selector="onDone:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="veJ-lW-9a6"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vbY-Ik-65h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ccd-NN-asp"/>
                     <constraint firstItem="uU6-gq-21f" firstAttribute="leading" secondItem="vbY-Ik-65h" secondAttribute="trailing" id="Chy-Jm-gtz"/>
+                    <constraint firstItem="exH-KU-QXH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uep-Cm-vGp"/>
                     <constraint firstItem="uU6-gq-21f" firstAttribute="centerY" secondItem="vbY-Ik-65h" secondAttribute="centerY" id="XDA-mh-SBh"/>
                     <constraint firstItem="vbY-Ik-65h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dIV-CL-e89"/>
+                    <constraint firstAttribute="trailing" secondItem="exH-KU-QXH" secondAttribute="trailing" constant="16" id="nuU-bP-pDv"/>
+                    <constraint firstItem="nlI-1D-xCs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="olc-sG-HhT"/>
+                    <constraint firstAttribute="trailing" secondItem="nlI-1D-xCs" secondAttribute="trailing" constant="16" id="tUN-H0-SRo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="doneButton" destination="exH-KU-QXH" id="2zE-EN-yNC"/>
                 <outlet property="nameLabel" destination="uU6-gq-21f" id="Iyp-7W-WJo"/>
                 <outlet property="selectedRadioButton" destination="vbY-Ik-65h" id="7mq-Np-vZh"/>
+                <outlet property="showInfoButton" destination="nlI-1D-xCs" id="AVq-wu-Xg9"/>
             </connections>
         </tableViewCell>
     </objects>

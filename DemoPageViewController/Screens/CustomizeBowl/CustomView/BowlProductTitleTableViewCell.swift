@@ -10,7 +10,7 @@ import UIKit
 
 class BowlProductTitleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var foodGroupNameLabel: UILabel!
+    @IBOutlet weak var productTypeLabel: UILabel!
     @IBOutlet weak var suggestWeightLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

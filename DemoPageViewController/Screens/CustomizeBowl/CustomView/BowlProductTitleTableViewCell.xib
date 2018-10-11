@@ -42,7 +42,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="foodGroupNameLabel" destination="wQf-MM-BjD" id="pjM-US-0yM"/>
+                <outlet property="productTypeLabel" destination="wQf-MM-BjD" id="HXq-t6-wJB"/>
                 <outlet property="suggestWeightLabel" destination="CGp-Nt-PhY" id="ebd-so-pAI"/>
             </connections>
             <point key="canvasLocation" x="25" y="70"/>

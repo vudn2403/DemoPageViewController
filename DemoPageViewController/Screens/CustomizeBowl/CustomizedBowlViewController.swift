@@ -62,33 +62,12 @@ class CustomizedBowlViewController: UIViewController {
     
     func setUpPagerController() {
         MyAPIClient.sharedClient.baseURLString = self.backendBaseURL
+        let proteinVC = BowlProductViewController(ProductType.protein)
+        let veggiesVC = BowlProductViewController(ProductType.veggies)
+        let sauceForSaladVC = BowlProductViewController(ProductType.sauceForSalad)
         let recipientVC = RecipientViewController(nibName: "RecipientViewController", bundle: nil)
         let scheduledDeliveryVC = ScheduledDeliveryViewController(nibName: "ScheduledDeliveryViewController", bundle: nil)
-        
-        let config = STPPaymentConfiguration.shared()
-        config.publishableKey = self.stripePublishableKey
-        config.appleMerchantIdentifier = self.appleMerchantID
-        config.requiredBillingAddressFields = .full
-        config.requiredShippingAddressFields = [.emailAddress, .name, .phoneNumber]
-        config.shippingType = .shipping
-        config.additionalPaymentMethods = .all
-        
-        // Create card sources instead of card tokens
-        config.createCardSources = true;
-        
-        let customerContext = STPCustomerContext(keyProvider: MyAPIClient.sharedClient)
-        
-//        let paymentContext = STPPaymentContext(customerContext: customerContext,
-//                                               configuration: config,
-//                                               theme: .default())
-//        let userInformation = STPUserInformation()
-//        paymentContext.prefilledInformation = userInformation
-//        paymentContext.paymentAmount = 5000
-//        paymentContext.paymentCurrency = self.paymentCurrency
-        
-        let paymentMethodsVC = STPPaymentMethodsViewController(configuration: config, theme: .default(), customerContext: customerContext, delegate: self)
-        let productVC = BowlProductViewController(nibName: "BowlProductViewController", bundle: nil)
-        viewControllers = [productVC, recipientVC, scheduledDeliveryVC, paymentMethodsVC]
+        viewControllers = [proteinVC, veggiesVC, sauceForSaladVC, recipientVC, scheduledDeliveryVC]
         pagerController.dataSource = self
         pagerController.delegate = self
         addChildViewController(pagerController)
