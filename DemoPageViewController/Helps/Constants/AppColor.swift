@@ -84,6 +84,18 @@ class AppColor: NSObject {
     class func colorGrayButton() -> UIColor {
         return UIColor.init(red: 114.0/255.0, green: 114.0/255.0, blue: 114.0/255.0, alpha: 1.0)
     }
+    
+    class func colorPaleGray() -> UIColor {
+        return UIColor(red: 238.0 / 255.0, green: 239.0 / 255.0, blue: 242.0 / 255.0, alpha: 1.0)
+    }
+    
+    class func colorSteelGrey() -> UIColor {
+        return UIColor(red: 120.0 / 255.0, green: 131.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)
+    }
+    
+    class func colorScarlet() -> UIColor {
+        return UIColor(red: 208.0 / 255.0, green: 2.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
+    }
 }
 
 

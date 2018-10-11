@@ -9,7 +9,7 @@
 import UIKit
 import Stripe
 
-class CustomizeBowlViewController: UIViewController {
+class CustomizedBowlViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var pageView: UIView!
     
@@ -18,18 +18,15 @@ class CustomizeBowlViewController: UIViewController {
     var viewControllers = [UIViewController]()
     
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var submitButton: UIButton!
     
     //MARK: - Variable
     fileprivate var currentPage = 0
     let stripePublishableKey = "pk_test_nYxpBPUe918NfRHIEBeyHkrd"
     let backendBaseURL: String? = "https://gem-demo-stripe.herokuapp.com"
     let appleMerchantID: String? = "dummy-merchant-id"
-    let companyName = "Emoji Apparel"
     let paymentCurrency = "usd"
     
     let paymentContext: STPPaymentContext? = nil
-    
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let numberFormatter: NumberFormatter? = nil
     let shippingString: String = ""
@@ -53,15 +50,14 @@ class CustomizeBowlViewController: UIViewController {
     
     // MARK: - Setup
     func setUp() {
-        navigationItem.title = "Customize Bowl"
+        navigationItem.title = "Customized Bowl"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "$ x.x", style: .done, target: self, action: nil)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowLeftWhite"), style: .done, target: self, action: #selector(onBack(_:)))
-        navigationController?.navigationBar.barTintColor = UIColor.blue
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = AppColor.colorPaleGray()
+        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         setUpPagerController()
         setUpPageControl()
-        submitButton.setTitle(currentPage != viewControllers.count - 1 ? "Next" : "Submit and review", for: .normal)
     }
     
     func setUpPagerController() {
@@ -72,7 +68,6 @@ class CustomizeBowlViewController: UIViewController {
         let config = STPPaymentConfiguration.shared()
         config.publishableKey = self.stripePublishableKey
         config.appleMerchantIdentifier = self.appleMerchantID
-        config.companyName = self.companyName
         config.requiredBillingAddressFields = .full
         config.requiredShippingAddressFields = [.emailAddress, .name, .phoneNumber]
         config.shippingType = .shipping
@@ -82,6 +77,7 @@ class CustomizeBowlViewController: UIViewController {
         config.createCardSources = true;
         
         let customerContext = STPCustomerContext(keyProvider: MyAPIClient.sharedClient)
+        
 //        let paymentContext = STPPaymentContext(customerContext: customerContext,
 //                                               configuration: config,
 //                                               theme: .default())
@@ -90,13 +86,11 @@ class CustomizeBowlViewController: UIViewController {
 //        paymentContext.paymentAmount = 5000
 //        paymentContext.paymentCurrency = self.paymentCurrency
         
-        let addCardVC = STPAddCardViewController(configuration: config, theme: .default())
-        //addCardVC.delegate = self
         let paymentMethodsVC = STPPaymentMethodsViewController(configuration: config, theme: .default(), customerContext: customerContext, delegate: self)
-//        let shippingVC = STPShippingAddressViewController(paymentContext: paymentContext)
-        viewControllers = [recipientVC, scheduledDeliveryVC, paymentMethodsVC]
-        //pagerController.dataSource = self
-        //pagerController.delegate = self
+        let productVC = BowlProductViewController(nibName: "BowlProductViewController", bundle: nil)
+        viewControllers = [productVC, recipientVC, scheduledDeliveryVC, paymentMethodsVC]
+        pagerController.dataSource = self
+        pagerController.delegate = self
         addChildViewController(pagerController)
         pagerController.view.frame.size = pageView.frame.size
         pagerController.setViewControllers([viewControllers[currentPage]], direction: .forward, animated: true, completion: nil)
@@ -112,95 +106,41 @@ class CustomizeBowlViewController: UIViewController {
         pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
-    // MARK: - IBAction
-    @IBAction func onSubmit(_ sender: UIButton) {
-        if currentPage == viewControllers.count - 1 {
-            if let vc = viewControllers[currentPage] as? ScheduledDeliveryViewController {
-                BowlViewModel.shareInstance.scheduleDelivery = vc.scheduleDilivery
-            }
-            //let vc = BrowseProductsViewController()]
-            let config = STPPaymentConfiguration.shared()
-            let addCardVC = STPAddCardViewController(configuration: config, theme: .default())
-            addCardVC.delegate = self
-            let nav = UINavigationController(rootViewController: addCardVC)
-            present(nav, animated: true, completion: nil)
-        } else {
-            var isVerify = true
-//            if let vc = viewControllers[currentPage] as? RecipientViewController {
-//                isVerify = vc.isVerify()
-//            }
-//
-//            if let vc = viewControllers[currentPage] as? ScheduledDeliveryViewController {
-//                isVerify = true
-//            }
-//
-//            if let vc = viewControllers[currentPage] as? STPPaymentMethodsViewController {
-//                isVerify = true
-//            }
-            
-            if isVerify {
-                currentPage += 1
-                updateUI()
-            }
-        }
-    }
-    
     // MARK: - Action
     
     @objc func onBack(_ sender: UIBarButtonItem) {
-        if currentPage == 0 {
-            alertWith("Thông báo", "Back to main page")
-        } else {
-            currentPage -= 1
-            updateUI()
-        }
-    }
-    
-    func updateUI() {
-        pagerController.setViewControllers([viewControllers[currentPage]], direction: .forward, animated: true, completion: nil)
-        pageControl.currentPage = currentPage
-        submitButton.setTitle(currentPage != viewControllers.count - 1 ? "Next" : "Submit and review", for: .normal)
+        alertWith("Thông báo", "Back to main page")
     }
 }
 
-extension CustomizeBowlViewController: UIPageViewControllerDataSource {
+// MARK: - UIPageViewControllerDataSource
+extension CustomizedBowlViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if let viewControllerIndex = viewControllers.index(of: viewController) {
+            if viewControllerIndex == 0 {
+                return nil
+            } else {
+                return viewControllers[viewControllerIndex - 1]
+            }
+        }
+
         return nil
     }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if let viewControllerIndex = viewControllers.index(of: viewController) {
+            if viewControllerIndex == viewControllers.count - 1{
+                return nil
+            } else {
+                return viewControllers[viewControllerIndex + 1]
+            }
+        }
         return nil
     }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-    }
-    
-    
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//        if let viewControllerIndex = viewControllers.index(of: viewController) {
-//            if viewControllerIndex == 0 {
-//                return nil
-//            } else {
-//                return viewControllers[viewControllerIndex - 1]
-//            }
-//        }
-//
-//        return nil
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-//        if let viewControllerIndex = viewControllers.index(of: viewController) {
-//            if viewControllerIndex == viewControllers.count - 1{
-//                return nil
-//            } else {
-//                return viewControllers[viewControllerIndex + 1]
-//            }
-//        }
-//        return nil
-//    }
 }
 
-extension CustomizeBowlViewController: UIPageViewControllerDelegate {
+// MARK: - UIPageViewControllerDelegate
+extension CustomizedBowlViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         // update pageControl
         let pageContentViewController = pageViewController.viewControllers![0]
@@ -208,7 +148,7 @@ extension CustomizeBowlViewController: UIPageViewControllerDelegate {
     }
 }
 
-extension CustomizeBowlViewController: STPPaymentMethodsViewControllerDelegate {
+extension CustomizedBowlViewController: STPPaymentMethodsViewControllerDelegate {
     func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
         alertWith("Lỗi", "did load with error")
     }
@@ -222,22 +162,18 @@ extension CustomizeBowlViewController: STPPaymentMethodsViewControllerDelegate {
     }
 }
 
-extension CustomizeBowlViewController: STPAddCardViewControllerDelegate {
+extension CustomizedBowlViewController: STPAddCardViewControllerDelegate {
     func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
         self.dismiss(animated: true, completion: nil)
     }
     
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
-        print(token.tokenId)
-        print(token.stripeID)
-        print(token.bankAccount?.bankName)
         self.dismiss(animated: true, completion: nil)
     }
     
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateSource source: STPSource, completion: @escaping STPErrorBlock) {
         // do something
         print("didCreateSource")
-        print(source.clientSecret)
         self.dismiss(animated: true, completion: nil)
     }
 }

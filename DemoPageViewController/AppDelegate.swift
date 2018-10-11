@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpRootView() {
-        let vc = CustomizeBowlViewController(nibName: "CustomizeBowlViewController", bundle: nil)
+        let vc = CustomizedBowlViewController(nibName: "CustomizedBowlViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()

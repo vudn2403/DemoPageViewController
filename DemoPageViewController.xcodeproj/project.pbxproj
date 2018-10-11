@@ -19,8 +19,8 @@
 		1D32FCED21630B9D002CF76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FCEB21630B9D002CF76A /* Main.storyboard */; };
 		1D32FCEF21630B9E002CF76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FCEE21630B9E002CF76A /* Assets.xcassets */; };
 		1D32FCF221630B9E002CF76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FCF021630B9E002CF76A /* LaunchScreen.storyboard */; };
-		1D32FD0121631212002CF76A /* CustomizeBowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FCFF21631212002CF76A /* CustomizeBowlViewController.swift */; };
-		1D32FD0221631212002CF76A /* CustomizeBowlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FD0021631212002CF76A /* CustomizeBowlViewController.xib */; };
+		1D32FD0121631212002CF76A /* CustomizedBowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FCFF21631212002CF76A /* CustomizedBowlViewController.swift */; };
+		1D32FD0221631212002CF76A /* CustomizedBowlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FD0021631212002CF76A /* CustomizedBowlViewController.xib */; };
 		1D32FD0521631526002CF76A /* RecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FD0321631526002CF76A /* RecipientViewController.swift */; };
 		1D32FD0621631526002CF76A /* RecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FD0421631526002CF76A /* RecipientViewController.xib */; };
 		1D32FD0C21634DE5002CF76A /* ScheduledDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FD0A21634DE5002CF76A /* ScheduledDeliveryViewController.swift */; };
@@ -34,16 +34,22 @@
 		1D32FD2421636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32FD2221636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift */; };
 		1D32FD2521636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D32FD2321636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib */; };
 		1D7AF92A21637B5E0016DB17 /* RecipientRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AF92921637B5E0016DB17 /* RecipientRowModel.swift */; };
-		1DCC9828216DE9E6005193E4 /* ProductGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9826216DE9E6005193E4 /* ProductGroupTableViewCell.swift */; };
-		1DCC9829216DE9E6005193E4 /* ProductGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC9827216DE9E6005193E4 /* ProductGroupTableViewCell.xib */; };
-		1DCC982C216DEA38005193E4 /* CustomizedBowlProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC982A216DEA38005193E4 /* CustomizedBowlProductTableViewCell.swift */; };
-		1DCC982D216DEA38005193E4 /* CustomizedBowlProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC982B216DEA38005193E4 /* CustomizedBowlProductTableViewCell.xib */; };
+		1DCC9828216DE9E6005193E4 /* BowlProductTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9826216DE9E6005193E4 /* BowlProductTitleTableViewCell.swift */; };
+		1DCC9829216DE9E6005193E4 /* BowlProductTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC9827216DE9E6005193E4 /* BowlProductTitleTableViewCell.xib */; };
+		1DCC982C216DEA38005193E4 /* BowlProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC982A216DEA38005193E4 /* BowlProductTableViewCell.swift */; };
+		1DCC982D216DEA38005193E4 /* BowlProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC982B216DEA38005193E4 /* BowlProductTableViewCell.xib */; };
+		1DCC9833216DF6CB005193E4 /* BowlProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9831216DF6CB005193E4 /* BowlProductViewController.swift */; };
+		1DCC9834216DF6CB005193E4 /* BowlProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC9832216DF6CB005193E4 /* BowlProductViewController.xib */; };
+		1DCC9836216DFC6F005193E4 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9835216DFC6F005193E4 /* UITableViewCellExtension.swift */; };
+		1DCC9838216DFCB7005193E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9837216DFCB7005193E4 /* Constants.swift */; };
+		1DCC983A216E04F5005193E4 /* OrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC9839216E04F5005193E4 /* OrdersModel.swift */; };
+		1DCC983C216E050B005193E4 /* OrdersDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC983B216E050B005193E4 /* OrdersDetailModel.swift */; };
+		1DCC983E216E051A005193E4 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC983D216E051A005193E4 /* FoodModel.swift */; };
 		1DEB537D216AF6DD00B13659 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */; };
 		1DEB5380216AFEC900B13659 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB537F216AFEC900B13659 /* BaseViewController.swift */; };
 		1DEB5386216B45EE00B13659 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5385216B45EE00B13659 /* SearchTextField.swift */; };
 		1DEB538D216B46AA00B13659 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5389216B46AA00B13659 /* AppColor.swift */; };
 		1DEB538E216B46AA00B13659 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538A216B46AA00B13659 /* AppFont.swift */; };
-		1DEB538F216B46AA00B13659 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538B216B46AA00B13659 /* Constants.swift */; };
 		1DEB5390216B46AA00B13659 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB538C216B46AA00B13659 /* Enum.swift */; };
 		1DEB5392216B474D00B13659 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5391216B474D00B13659 /* UIColorExtension.swift */; };
 		1DEB539A216B5C2600B13659 /* BowlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB5399216B5C2600B13659 /* BowlViewModel.swift */; };
@@ -67,8 +73,8 @@
 		1D32FCEE21630B9E002CF76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D32FCF121630B9E002CF76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D32FCF321630B9E002CF76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D32FCFF21631212002CF76A /* CustomizeBowlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBowlViewController.swift; sourceTree = "<group>"; };
-		1D32FD0021631212002CF76A /* CustomizeBowlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizeBowlViewController.xib; sourceTree = "<group>"; };
+		1D32FCFF21631212002CF76A /* CustomizedBowlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedBowlViewController.swift; sourceTree = "<group>"; };
+		1D32FD0021631212002CF76A /* CustomizedBowlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizedBowlViewController.xib; sourceTree = "<group>"; };
 		1D32FD0321631526002CF76A /* RecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientViewController.swift; sourceTree = "<group>"; };
 		1D32FD0421631526002CF76A /* RecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipientViewController.xib; sourceTree = "<group>"; };
 		1D32FD0A21634DE5002CF76A /* ScheduledDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledDeliveryViewController.swift; sourceTree = "<group>"; };
@@ -82,16 +88,22 @@
 		1D32FD2221636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientSavedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		1D32FD2321636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipientSavedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		1D7AF92921637B5E0016DB17 /* RecipientRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientRowModel.swift; sourceTree = "<group>"; };
-		1DCC9826216DE9E6005193E4 /* ProductGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGroupTableViewCell.swift; sourceTree = "<group>"; };
-		1DCC9827216DE9E6005193E4 /* ProductGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductGroupTableViewCell.xib; sourceTree = "<group>"; };
-		1DCC982A216DEA38005193E4 /* CustomizedBowlProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedBowlProductTableViewCell.swift; sourceTree = "<group>"; };
-		1DCC982B216DEA38005193E4 /* CustomizedBowlProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizedBowlProductTableViewCell.xib; sourceTree = "<group>"; };
+		1DCC9826216DE9E6005193E4 /* BowlProductTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlProductTitleTableViewCell.swift; sourceTree = "<group>"; };
+		1DCC9827216DE9E6005193E4 /* BowlProductTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BowlProductTitleTableViewCell.xib; sourceTree = "<group>"; };
+		1DCC982A216DEA38005193E4 /* BowlProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlProductTableViewCell.swift; sourceTree = "<group>"; };
+		1DCC982B216DEA38005193E4 /* BowlProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BowlProductTableViewCell.xib; sourceTree = "<group>"; };
+		1DCC9831216DF6CB005193E4 /* BowlProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlProductViewController.swift; sourceTree = "<group>"; };
+		1DCC9832216DF6CB005193E4 /* BowlProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BowlProductViewController.xib; sourceTree = "<group>"; };
+		1DCC9835216DFC6F005193E4 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		1DCC9837216DFCB7005193E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../../wcec-ios/WCEC/Helper/Constants/Constants.swift"; sourceTree = "<group>"; };
+		1DCC9839216E04F5005193E4 /* OrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersModel.swift; sourceTree = "<group>"; };
+		1DCC983B216E050B005193E4 /* OrdersDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersDetailModel.swift; sourceTree = "<group>"; };
+		1DCC983D216E051A005193E4 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1DEB537F216AFEC900B13659 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1DEB5385216B45EE00B13659 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		1DEB5389216B46AA00B13659 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		1DEB538A216B46AA00B13659 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		1DEB538B216B46AA00B13659 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1DEB538C216B46AA00B13659 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		1DEB5391216B474D00B13659 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1DEB5399216B5C2600B13659 /* BowlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlViewModel.swift; sourceTree = "<group>"; };
@@ -165,12 +177,13 @@
 		1D32FD0721634D22002CF76A /* CustomizeBowl */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC9830216DF446005193E4 /* Product */,
 				1DCC9821216DE382005193E4 /* CustomView */,
 				1DEB5398216B597400B13659 /* ViewModel */,
 				1D32FD0821634D3C002CF76A /* Recipient */,
 				1D32FD0921634D45002CF76A /* ScheduledDelivery */,
-				1D32FD0021631212002CF76A /* CustomizeBowlViewController.xib */,
-				1D32FCFF21631212002CF76A /* CustomizeBowlViewController.swift */,
+				1D32FD0021631212002CF76A /* CustomizedBowlViewController.xib */,
+				1D32FCFF21631212002CF76A /* CustomizedBowlViewController.swift */,
 			);
 			path = CustomizeBowl;
 			sourceTree = "<group>";
@@ -237,12 +250,21 @@
 		1DCC9821216DE382005193E4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				1DCC9826216DE9E6005193E4 /* ProductGroupTableViewCell.swift */,
-				1DCC9827216DE9E6005193E4 /* ProductGroupTableViewCell.xib */,
-				1DCC982A216DEA38005193E4 /* CustomizedBowlProductTableViewCell.swift */,
-				1DCC982B216DEA38005193E4 /* CustomizedBowlProductTableViewCell.xib */,
+				1DCC9826216DE9E6005193E4 /* BowlProductTitleTableViewCell.swift */,
+				1DCC9827216DE9E6005193E4 /* BowlProductTitleTableViewCell.xib */,
+				1DCC982A216DEA38005193E4 /* BowlProductTableViewCell.swift */,
+				1DCC982B216DEA38005193E4 /* BowlProductTableViewCell.xib */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		1DCC9830216DF446005193E4 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				1DCC9831216DF6CB005193E4 /* BowlProductViewController.swift */,
+				1DCC9832216DF6CB005193E4 /* BowlProductViewController.xib */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		1DEB537A216AF6B700B13659 /* Helps */ = {
@@ -258,6 +280,7 @@
 		1DEB537B216AF6C200B13659 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC9835216DFC6F005193E4 /* UITableViewCellExtension.swift */,
 				1DEB5391216B474D00B13659 /* UIColorExtension.swift */,
 				1DEB537C216AF6DD00B13659 /* UIViewControllerExtension.swift */,
 			);
@@ -308,9 +331,9 @@
 		1DEB5388216B46AA00B13659 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC9837216DFCB7005193E4 /* Constants.swift */,
 				1DEB5389216B46AA00B13659 /* AppColor.swift */,
 				1DEB538A216B46AA00B13659 /* AppFont.swift */,
-				1DEB538B216B46AA00B13659 /* Constants.swift */,
 				1DEB538C216B46AA00B13659 /* Enum.swift */,
 			);
 			path = Constants;
@@ -337,6 +360,9 @@
 		1DEB5395216B52F400B13659 /* BusinessModels */ = {
 			isa = PBXGroup;
 			children = (
+				1DCC9839216E04F5005193E4 /* OrdersModel.swift */,
+				1DCC983B216E050B005193E4 /* OrdersDetailModel.swift */,
+				1DCC983D216E051A005193E4 /* FoodModel.swift */,
 				1DEB539B216B604C00B13659 /* RecipientModel.swift */,
 				1DEB539D216B627900B13659 /* ScheduleDeliveryModel.swift */,
 			);
@@ -446,13 +472,14 @@
 				1D32FCF221630B9E002CF76A /* LaunchScreen.storyboard in Resources */,
 				1D32FCEF21630B9E002CF76A /* Assets.xcassets in Resources */,
 				1D32FD0D21634DE5002CF76A /* ScheduledDeliveryViewController.xib in Resources */,
-				1D32FD0221631212002CF76A /* CustomizeBowlViewController.xib in Resources */,
+				1D32FD0221631212002CF76A /* CustomizedBowlViewController.xib in Resources */,
 				1D32FD2121635717002CF76A /* ScheduledDeliveryDayTableViewCell.xib in Resources */,
 				1D32FD2521636ACF002CF76A /* RecipientSavedInfoTableViewCell.xib in Resources */,
-				1DCC982D216DEA38005193E4 /* CustomizedBowlProductTableViewCell.xib in Resources */,
+				1DCC9834216DF6CB005193E4 /* BowlProductViewController.xib in Resources */,
+				1DCC982D216DEA38005193E4 /* BowlProductTableViewCell.xib in Resources */,
 				1D32FD1D216356DC002CF76A /* ScheduledDeliveryTimeTableViewCell.xib in Resources */,
 				1D32FD1321635061002CF76A /* RecipientAddNewTableViewCell.xib in Resources */,
-				1DCC9829216DE9E6005193E4 /* ProductGroupTableViewCell.xib in Resources */,
+				1DCC9829216DE9E6005193E4 /* BowlProductTitleTableViewCell.xib in Resources */,
 				1D32FD0621631526002CF76A /* RecipientViewController.xib in Resources */,
 				1D32FCED21630B9D002CF76A /* Main.storyboard in Resources */,
 			);
@@ -509,7 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D32FCEA21630B9D002CF76A /* ViewController.swift in Sources */,
-				1D32FD0121631212002CF76A /* CustomizeBowlViewController.swift in Sources */,
+				1D32FD0121631212002CF76A /* CustomizedBowlViewController.swift in Sources */,
 				1DEB539A216B5C2600B13659 /* BowlViewModel.swift in Sources */,
 				1D1BD77E216C8E20007D4028 /* Buttons.swift in Sources */,
 				1D32FD2021635717002CF76A /* ScheduledDeliveryDayTableViewCell.swift in Sources */,
@@ -520,7 +547,6 @@
 				1D1BD77F216C8E20007D4028 /* BrowseProductsViewController.swift in Sources */,
 				1DEB5380216AFEC900B13659 /* BaseViewController.swift in Sources */,
 				1D1BD773216C8BD6007D4028 /* MyAPIClient.swift in Sources */,
-				1DEB538F216B46AA00B13659 /* Constants.swift in Sources */,
 				1D32FD0C21634DE5002CF76A /* ScheduledDeliveryViewController.swift in Sources */,
 				1D7AF92A21637B5E0016DB17 /* RecipientRowModel.swift in Sources */,
 				1D32FD1221635061002CF76A /* RecipientAddNewTableViewCell.swift in Sources */,
@@ -528,14 +554,20 @@
 				1D1BD77B216C8E20007D4028 /* SettingsViewController.swift in Sources */,
 				1DEB538E216B46AA00B13659 /* AppFont.swift in Sources */,
 				1DEB5390216B46AA00B13659 /* Enum.swift in Sources */,
-				1DCC9828216DE9E6005193E4 /* ProductGroupTableViewCell.swift in Sources */,
+				1DCC9828216DE9E6005193E4 /* BowlProductTitleTableViewCell.swift in Sources */,
+				1DCC983E216E051A005193E4 /* FoodModel.swift in Sources */,
 				1D1BD780216C8E20007D4028 /* CheckoutViewController.swift in Sources */,
 				1DEB537D216AF6DD00B13659 /* UIViewControllerExtension.swift in Sources */,
+				1DCC9838216DFCB7005193E4 /* Constants.swift in Sources */,
+				1DCC9836216DFC6F005193E4 /* UITableViewCellExtension.swift in Sources */,
+				1DCC983A216E04F5005193E4 /* OrdersModel.swift in Sources */,
 				1D32FD2421636ACF002CF76A /* RecipientSavedInfoTableViewCell.swift in Sources */,
-				1DCC982C216DEA38005193E4 /* CustomizedBowlProductTableViewCell.swift in Sources */,
+				1DCC982C216DEA38005193E4 /* BowlProductTableViewCell.swift in Sources */,
 				1DEB5386216B45EE00B13659 /* SearchTextField.swift in Sources */,
+				1DCC9833216DF6CB005193E4 /* BowlProductViewController.swift in Sources */,
 				1DEB539E216B627900B13659 /* ScheduleDeliveryModel.swift in Sources */,
 				1D1BD77C216C8E20007D4028 /* PaymentContextFooterView.swift in Sources */,
+				1DCC983C216E050B005193E4 /* OrdersDetailModel.swift in Sources */,
 				1D1BD77D216C8E20007D4028 /* CheckoutRowView.swift in Sources */,
 				1DEB539C216B604C00B13659 /* RecipientModel.swift in Sources */,
 			);

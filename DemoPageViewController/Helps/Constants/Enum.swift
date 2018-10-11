@@ -37,8 +37,6 @@ enum AccountType {
             return "line"
         case .unknow:
             return "Unknow"
-        default:
-            return ""
         }
     }
 }

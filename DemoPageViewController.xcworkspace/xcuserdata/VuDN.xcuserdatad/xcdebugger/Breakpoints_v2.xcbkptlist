@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoPageViewController/Screens/Payment/CheckoutViewController.swift"
-            timestampString = "560849549.125155"
+            timestampString = "560863392.0930099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoPageViewController/Screens/Payment/CheckoutViewController.swift"
-            timestampString = "560849549.12523"
+            timestampString = "560863392.093163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -138,7 +138,7 @@
                   moduleName = "DemoPageViewController"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VuDN/Documents/Project/DemoPageViewController/DemoPageViewController/Screens/Payment/CheckoutViewController.swift"
-                  timestampString = "560849549.32224"
+                  timestampString = "560921979.203788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -153,7 +153,7 @@
                   moduleName = "DemoPageViewController"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VuDN/Documents/Project/DemoPageViewController/DemoPageViewController/Screens/Payment/CheckoutViewController.swift"
-                  timestampString = "560849549.324308"
+                  timestampString = "560921979.2063479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -170,29 +170,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoPageViewController/Screens/Payment/CheckoutViewController.swift"
-            timestampString = "560849549.125288"
+            timestampString = "560863392.093227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "paymentInProgress"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DemoPageViewController/Models/APIServices/MyAPIClient.swift"
-            timestampString = "560849549.125348"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "createCustomerKey(withAPIVersion:completion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
