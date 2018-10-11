@@ -22,20 +22,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-La-pcq">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="605"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="3Mi-V6-wHk"/>
                         <outlet property="delegate" destination="-1" id="7zV-Op-eke"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2j-pQ-zso">
+                    <rect key="frame" x="0.0" y="625" width="375" height="42"/>
+                    <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="k2v-js-bnY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="Submit and review">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j2g-La-pcq" secondAttribute="trailing" id="15E-mG-CHK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="e2j-pQ-zso" secondAttribute="bottom" id="BuG-Lz-5Tp"/>
                 <constraint firstItem="j2g-La-pcq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kfu-QR-eYb"/>
+                <constraint firstItem="e2j-pQ-zso" firstAttribute="top" secondItem="j2g-La-pcq" secondAttribute="bottom" id="rhz-SH-fHO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e2j-pQ-zso" secondAttribute="trailing" id="tuc-dh-C9P"/>
+                <constraint firstItem="e2j-pQ-zso" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vvl-Rh-NId"/>
                 <constraint firstItem="j2g-La-pcq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wV8-sl-CeI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j2g-La-pcq" secondAttribute="bottom" id="yzM-Pd-ep7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="25.5" y="51.5"/>
